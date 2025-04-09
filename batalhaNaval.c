@@ -20,27 +20,56 @@ int main() {
         printf("\n");
     }
 
-    // Imprime os rótulos das colunas (A, B, C)
-    printf("  A B C D E F G H I J \n");
+    
+    printf("      BATALHA NAVAVAL\n");
 
-     // Coloca o navio nas posições 
+     // Coloca o navio nas posições diagonal
      tabuleiro[2][2] = 4;
-     tabuleiro[2][3] = 4;
-     tabuleiro[2][4] = 4;
-     //segundo navio
+     tabuleiro[3][3] = 4;
+     tabuleiro[4][4] = 4;
+     
+     //segundo navio vertical
      tabuleiro[4][0] = 4;
      tabuleiro[5][0] = 4;
      tabuleiro[6][0] = 4;
  
-     //terceiro navio
+     //terceiro navio horizontal
      tabuleiro[0][7] = 4;
      tabuleiro[0][8] = 4;
      tabuleiro[0][9] = 4;
-
-     //quarto navio
+     
+     //quarto navio diagonal
      tabuleiro[7][6] = 4;
-     tabuleiro[8][6] = 4;
-     tabuleiro[9][6] = 4;
+     tabuleiro[8][5] = 4;
+     tabuleiro[9][4] = 4;
+
+     //Adicionando o cone
+     tabuleiro[5][9] = 1;
+     tabuleiro[5][8] = 1;
+     tabuleiro[5][7] = 1;
+     tabuleiro[5][6] = 1;
+     tabuleiro[5][5] = 1;
+     //camadas do cone
+     tabuleiro[4][6] = 2;
+     tabuleiro[4][7] = 2;
+     tabuleiro[4][8] = 2;
+     tabuleiro[3][7] = 2;
+
+     //Adicionando o octaedro
+     tabuleiro[8][1] = 2;
+     tabuleiro[8][2] = 2;
+     tabuleiro[8][3] = 2;
+     tabuleiro[9][2] = 2;
+     tabuleiro[7][2] = 2;
+
+     //Adicionando a cruz
+     tabuleiro[0][5] = 3;
+     tabuleiro[1][7] = 3;
+     tabuleiro[1][6] = 3;
+     tabuleiro[1][5] = 3;
+     tabuleiro[1][4] = 3;
+     tabuleiro[1][3] = 3;
+     tabuleiro[2][5] = 3;
 
      // Imprime os rótulos das colunas
      printf("   "); // Espaço para alinhar com os números das linhas
